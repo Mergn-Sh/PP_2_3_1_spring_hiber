@@ -27,7 +27,7 @@ public class AppConfig {
         ComboPooledDataSource dataSource = new ComboPooledDataSource();
         try {
             dataSource.setDriverClass("com.mysql.cj.jdbc.Driver");
-            dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/spring_hibernate?useSSL=false&amp;serverTimezone=UTC");
+            dataSource.setJdbcUrl("jdbc:mysql://localhost:3306/spring_hibernate?useSSL=false&serverTimezone=UTC");
             dataSource.setUser("root");
             dataSource.setPassword("root");
         } catch (PropertyVetoException e) {
@@ -67,4 +67,27 @@ public class AppConfig {
         internalResourceViewResolver.setSuffix(".jsp");
         return internalResourceViewResolver;
     }
+
+//      @Bean
+//      public LocalSessionFactoryBean sessionFactoryBean(){
+//          LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
+//          sessionFactoryBean.setDataSource(dataSource());
+//          sessionFactoryBean.setPackagesToScan("web.entity");
+//
+//          Properties hibernateProperties = new Properties();
+//          hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
+//          hibernateProperties.setProperty("hibernate.show_sql", "true");
+//
+//          sessionFactoryBean.setHibernateProperties(hibernateProperties);
+//
+//          return sessionFactoryBean;
+//      }
+
+//      @Bean
+//      public HibernateTransactionManager transactionManager(){
+//        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
+//        transactionManager.setSessionFactory(sessionFactoryBean().getObject());
+//
+//        return transactionManager;
+//      }
 }

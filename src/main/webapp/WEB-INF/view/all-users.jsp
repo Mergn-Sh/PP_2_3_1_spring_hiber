@@ -6,8 +6,8 @@
 <br>
 
 <table>
-    <tr>Name</tr>
-    <tr>Surname</tr>
+    <tr>Name </tr>
+    <tr>Surname </tr>
     <tr>Email</tr>
     <c:forEach var="user" items="${allUsers}">
         <tr>
