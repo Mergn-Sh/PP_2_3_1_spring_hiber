@@ -24,8 +24,8 @@ public class MyController {
         return "all-users";
     }
 
-    @RequestMapping("/addNewEmployee")
-    public String addNewEmployee(Model model){
+    @RequestMapping("/addNewUser")
+    public String addNewUser(Model model){
         User user = new User();
         model.addAttribute("user", user);
 

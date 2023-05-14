@@ -10,6 +10,7 @@
         <th>Name</th>
         <th>Surname</th>
         <th>Email</th>
+        <th>Operations</th>
     </tr>
     <c:forEach var="user" items="${allUsers}">
 
@@ -35,7 +36,7 @@
 </table>
 <br>
 
-<input type="button" value="Add" onclick="window.location.href='addNewEmployee'">
+<input type="button" value="Add" onclick="window.location.href='addNewUser'">
 
 </body>
 </html>
