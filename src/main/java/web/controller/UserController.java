@@ -27,9 +27,9 @@ public class UserController {
     @RequestMapping("/addNewUser")
     public String addNewUser(Model model){
         User user = new User();
-        model.addAttribute("user", user);
+        model.addAttribute("addUser", user);
 
-        return "user-info";
+        return "save-info";
     }
 
     @RequestMapping("/saveUser")
@@ -38,17 +38,17 @@ public class UserController {
         return "redirect:/";
     }
 
-    @RequestMapping("/UpdateUser")
+    @RequestMapping("/updateInfo")
+    public String updateInfo(@RequestParam("userId") int id, Model model){
+        model.addAttribute("updateUser", userService.getUser(id));
+
+        return "update-info";
+    }
+
+    @RequestMapping("/updateUser")
     public String updateUser(@ModelAttribute("user") User user){
         userService.UpdateUser(user);
         return "redirect:/";
-    }
-
-    @RequestMapping("/updateInfo")
-    public String updateInfo(@RequestParam("userId") int id, Model model){
-        model.addAttribute("user", userService.getUser(id));
-
-        return "user-info";
     }
 
     @RequestMapping("/deleteUser")

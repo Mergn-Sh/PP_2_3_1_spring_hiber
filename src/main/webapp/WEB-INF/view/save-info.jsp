@@ -5,7 +5,7 @@
 <h2>Save info</h2>
 <br>
 
-<form:form action="saveUser" modelAttribute="user">
+<form:form action="saveUser" modelAttribute="addUser">
     <form:hidden path="id"/>
 
     Name <form:input path="name"/>

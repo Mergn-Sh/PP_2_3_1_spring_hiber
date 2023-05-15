@@ -5,7 +5,7 @@
 <h2>Update info</h2>
 <br>
 
-<form:form action="updateUser" modelAttribute="user">
+<form:form action="updateUser" modelAttribute="updateUser">
     <form:hidden path="id"/>
 
     Name <form:input path="name"/>
