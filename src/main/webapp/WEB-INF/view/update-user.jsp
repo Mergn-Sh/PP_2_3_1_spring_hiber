@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>Save info</h2>
+<h2>Update info</h2>
 <br>
 
-<form:form action="saveUser" modelAttribute="user">
+<form:form action="updateUser" modelAttribute="user">
     <form:hidden path="id"/>
 
     Name <form:input path="name"/>

@@ -12,7 +12,7 @@ import web.service.UserService;
 import java.util.List;
 
 @Controller
-public class MyController {
+public class UserController {
     @Autowired
     private UserService userService;
 
@@ -32,14 +32,20 @@ public class MyController {
         return "user-info";
     }
 
-    @RequestMapping("/saveOrUpdateUser")
-    public String saveOrUpdateUser(@ModelAttribute("user") User user){
-        userService.saveOrUpdateUser(user);
+    @RequestMapping("/saveUser")
+    public String saveUser(@ModelAttribute("user") User user){
+        userService.saveUser(user);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/UpdateUser")
+    public String updateUser(@ModelAttribute("user") User user){
+        userService.UpdateUser(user);
         return "redirect:/";
     }
 
     @RequestMapping("/updateInfo")
-    public String updateUser(@RequestParam("userId") int id, Model model){
+    public String updateInfo(@RequestParam("userId") int id, Model model){
         model.addAttribute("user", userService.getUser(id));
 
         return "user-info";
