@@ -9,7 +9,7 @@ public interface UserDao {
 
     void saveUser(User user);
 
-    void UpdateUser(User user);
+    void updateUser(User user);
 
     User getUser(int id);
 

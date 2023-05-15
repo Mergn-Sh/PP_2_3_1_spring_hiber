@@ -60,13 +60,13 @@ public class AppConfig {
         return transactionManager;
     }
 
-    @Bean
-    public ViewResolver viewResolver(){
-        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-        internalResourceViewResolver.setPrefix("/WEB-INF/view/");
-        internalResourceViewResolver.setSuffix(".jsp");
-        return internalResourceViewResolver;
-    }
+//    @Bean
+//    public ViewResolver viewResolver(){
+//        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+//        internalResourceViewResolver.setPrefix("/WEB-INF/view/");
+//        internalResourceViewResolver.setSuffix(".jsp");
+//        return internalResourceViewResolver;
+//    }
 
 //      @Bean
 //      public LocalSessionFactoryBean sessionFactoryBean(){
