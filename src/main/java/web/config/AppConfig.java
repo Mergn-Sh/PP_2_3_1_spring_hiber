@@ -9,9 +9,7 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import javax.sql.DataSource;
 import java.beans.PropertyVetoException;
@@ -59,35 +57,4 @@ public class AppConfig {
         transactionManager.setEntityManagerFactory(entityManagerFactoryBean().getObject());
         return transactionManager;
     }
-
-//    @Bean
-//    public ViewResolver viewResolver(){
-//        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-//        internalResourceViewResolver.setPrefix("/WEB-INF/view/");
-//        internalResourceViewResolver.setSuffix(".jsp");
-//        return internalResourceViewResolver;
-//    }
-
-//      @Bean
-//      public LocalSessionFactoryBean sessionFactoryBean(){
-//          LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
-//          sessionFactoryBean.setDataSource(dataSource());
-//          sessionFactoryBean.setPackagesToScan("web.entity");
-//
-//          Properties hibernateProperties = new Properties();
-//          hibernateProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
-//          hibernateProperties.setProperty("hibernate.show_sql", "true");
-//
-//          sessionFactoryBean.setHibernateProperties(hibernateProperties);
-//
-//          return sessionFactoryBean;
-//      }
-
-//      @Bean
-//      public HibernateTransactionManager transactionManager(){
-//        HibernateTransactionManager transactionManager = new HibernateTransactionManager();
-//        transactionManager.setSessionFactory(sessionFactoryBean().getObject());
-//
-//        return transactionManager;
-//      }
 }
